@@ -2,12 +2,12 @@ name: ci-golang-workflow
 on: 
   pull_request:
     branches:
-      - develop
-strategy:
-  matrix:
-    go: ['1.15','1.19']  
-jobs: 
+      - develop 
+jobs:
   check-application:
+    strategy:
+      matrix:
+        go: ['1.15','1.19'] 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
