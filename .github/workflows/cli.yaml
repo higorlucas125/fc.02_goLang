@@ -4,11 +4,13 @@ on:
     branches:
       - develop 
 jobs:
-  check-application:
+  check-application: 
+    runs-on: ubuntu-latest
+    
     strategy:
       matrix:
-        go: ['1.15','1.19'] 
-    runs-on: ubuntu-latest
+        go: ['1.15','1.19']
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
