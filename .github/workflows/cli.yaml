@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false
-          tags: higordockers/fc_02_goLang:latest
+          tags: higordockers/fc_02_golang:latest
